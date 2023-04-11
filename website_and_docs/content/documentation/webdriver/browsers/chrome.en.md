@@ -20,7 +20,7 @@ Capabilities unique to Chrome can be found at Google's page for [Capabilities & 
 
 Starting a Chrome session with basic defined options looks like this:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L18-L19" >}}
 {{< /tab >}}
@@ -51,7 +51,7 @@ Commonly used args include `--start-maximized` and `--headless=new`
 
 Add an argument to options:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L24-L26" >}}
 {{< /tab >}}
@@ -79,7 +79,7 @@ use chromedriver to drive various Chromium based browsers.
 
 Add a browser location to options:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -102,7 +102,9 @@ Add a browser location to options:
 
 ### Add extensions
 
-The `extensions` parameter accepts crx files
+The `extensions` parameter accepts crx files. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
 
 Add an extension to options:
 
@@ -114,9 +116,9 @@ Setting the `detach` parameter to true will keep the browser open after the driv
 
 Add a binary to options:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L31-L33" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L12-L13">}}
@@ -142,7 +144,7 @@ A common example is to turn the popup blocker back on.
 
 Set excluded arguments on options:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -172,6 +174,10 @@ You can drive Chrome Cast devices, including sharing tabs
 ## Network conditions
 
 You can simulate various network conditions.
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
 

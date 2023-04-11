@@ -20,7 +20,7 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 
 基本的な定義済みオプションを使用してChromeセッションを開始すると、次のようになります。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L18-L19" >}}
 {{< /tab >}}
@@ -50,7 +50,7 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 
 オプションに引数を追加します。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L24-L26" >}}
 {{< /tab >}}
@@ -78,7 +78,7 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 
 オプションにブラウザのロケーションを追加します。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -103,6 +103,10 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 
 `extensions` パラメーターはcrxファイルを受け入れます
 
+The `extensions` parameter accepts crx files. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
+
 オプションに拡張機能を追加します。
 
 {{< alert-code />}}
@@ -113,9 +117,9 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 
 オプションにバイナリを追加します。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L31-L33" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L12-L13">}}
@@ -142,7 +146,7 @@ Chrome はさまざまな引数を追加します。
 
 オプションに除外された引数を設定します。
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -172,6 +176,10 @@ Chrome はさまざまな引数を追加します。
 ## ネットワークの状態
 
 さまざまなネットワークの状態をシミュレートできます。
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
 

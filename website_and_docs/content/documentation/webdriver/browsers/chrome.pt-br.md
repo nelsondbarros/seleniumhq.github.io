@@ -19,7 +19,7 @@ Capacidades únicas ao Chrome podem ser encontradas na página da Google para [C
 
 Este é um exemplo de como iniciar uma sessão Chrome com um conjunto de opções básicas:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L18-L19" >}}
 {{< /tab >}}
@@ -49,7 +49,7 @@ Opções mais frequentes incluem `--start-maximized` e `--headless=new`
 
 Adicione uma opção:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L24-L26" >}}
 {{< /tab >}}
@@ -74,7 +74,7 @@ Adicione uma opção:
 
 Adicionar uma localização:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -99,6 +99,10 @@ Adicionar uma localização:
 
 O parametro `extensions` aceita ficheiros crx 
 
+The `extensions` parameter accepts crx files. As for unpacked directories,
+please use the `load-extension` argument instead, as mentioned in
+[this post](https://chromedriver.chromium.org/extensions).
+
 Adicionar uma extensão:
 
 {{< alert-code />}}
@@ -109,9 +113,9 @@ Ao definir o parametro `detach` para true, irá manter o navegador aberto mesmo 
 
 Adicionar detach:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L31-L33" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L12-L13">}}
@@ -138,7 +142,7 @@ Um exemplo comum é voltar a activar o bloqueador de popups.
 
 Exclua parametros:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -168,6 +172,10 @@ Pode comandar dispositivos Chrome Cast, incluindo partilhar abas
 ## Condições de rede
 
 Pode simular vários estados de rede (como exemplo, simular situações com pouca banda).
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
 

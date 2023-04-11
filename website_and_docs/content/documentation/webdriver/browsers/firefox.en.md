@@ -19,7 +19,7 @@ Capabilities unique to Firefox can be found at Mozilla's page for [firefoxOption
 
 Starting a Firefox session with basic defined options looks like this:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L24-L25" >}}
 {{< /tab >}}
@@ -33,7 +33,7 @@ Starting a Firefox session with basic defined options looks like this:
 {{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L9-L10" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L14">}}
+{{< gh-codeblock path="/examples/javascript/test/getting_started/openFirefoxTest.spec.js#L10-L13">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -48,25 +48,25 @@ Commonly used args include `-headless` and `"-profile", "/path/to/profile"`
 Add an argument to options:
 
 <div>
-{{< tabpane code=false langEqualsHeader=true >}}
-{{< tab header="Java" >}}
+{{< tabpane langEqualsHeader=true >}}
+{{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L63-L64" >}}
 {{< /tab >}}
-{{< tab header="Python" code=true >}}
+{{< tab header="Python" >}}
 options=Options()
 options.add_argument("-profile")
 options.add_argument("/path/to/profile")
 {{< /tab >}}
-{{< tab header="CSharp" >}}
+{{< tab header="CSharp" text=true >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/FirefoxTest.cs#L74-L76" >}}
 {{< /tab >}}
-{{< tab header="Ruby" >}}
+{{< tab header="Ruby" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
-{{< tab header="JavaScript" >}}
+{{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/firefoxSpecificFunctionalities.js#L7-L10">}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
+{{< tab header="Kotlin" text=true >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
@@ -135,13 +135,19 @@ driver = RemoteWebDriver(options)
 
 ## Add-ons
 
-Unlike Chrome, Firefox extensions are not added as part of capabilities, they are created after starting the driver.
+Unlike Chrome, Firefox extensions are not added as part of capabilities as mentioned in
+[this issue](https://github.com/mozilla/geckodriver/issues/1476),
+they are created after starting the driver.
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 ### Installation
 
 A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla.org/en-US/firefox/) 
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L31-L32" >}}
 {{< /tab >}}
@@ -166,7 +172,7 @@ A signed xpi file you would get from [Mozilla Addon page](https://addons.mozilla
 
 Uninstalling an addon requires knowing its id. The id can be obtained from the return value when installing the add-on.
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L42-L44" >}}
 {{< /tab >}}
@@ -194,7 +200,7 @@ When working with an unfinished or unpublished extension, it will likely not be 
 be installed as "temporary." This can be done by passing in either a zip file or a directory, here's an 
 example with a directory:
 
-{{< tabpane code=false langEqualsHeader=true >}}
+{{< tabpane text=true langEqualsHeader=true >}}
 {{< tab header="Java" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L53-L54" >}}
 {{< /tab >}}
@@ -219,8 +225,16 @@ example with a directory:
 
 ## Full page screenshots
 
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+
 {{< alert-code />}}
 
 ## Context
+
+The following examples are for local webdrivers. For remote webdrivers,
+please refer to the
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
 
 {{< alert-code />}}
